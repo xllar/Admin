@@ -1,0 +1,122 @@
+/* Sidebar.scss */
+
+.sidebar {
+    position: relative;
+    width: 16rem; /* Default sidebar width */
+    transition: width 0.3s ease;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar.open {
+    width: 16rem;
+  }
+  
+  .sidebar.closed {
+    width: 4rem;
+  }
+  
+  .sidebar__brand-logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .sidebar__menu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+  
+  .sidebar__menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar__menu-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .sidebar__menu-item .icon {
+    margin-right: 0.5rem;
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .sidebar__submenu {
+    display: none;
+    padding-left: 1rem;
+  }
+  
+  .sidebar__submenu.open {
+    display: block;
+  }
+  
+  .sidebar__submenu-item {
+    padding: 0.5rem 0;
+    cursor: pointer;
+  }
+  
+  .sidebar__submenu-item a {
+    color: #666;
+    text-decoration: none;
+  }
+  
+  .sidebar__submenu-item a:hover {
+    color: #333;
+  }
+  
+  /* Mobile-specific styles */
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+  
+  .mobile-menu-overlay.open {
+    display: block;
+  }
+  
+  .mobile-menu {
+    background-color: #fff;
+    padding: 2rem;
+  }
+  
+  .mobile-menu__item {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .mobile-menu__item .icon {
+    margin-right: 0.5rem;
+  }
+  
+  .mobile-menu__submenu {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .mobile-menu__submenu-item {
+    padding: 0.5rem 0;
+  }
+  
+  /* Styling for toggle buttons */
+  .toggle-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
